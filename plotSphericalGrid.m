@@ -1,4 +1,12 @@
 function h_ax = plotSphericalGrid(F, ang_res, ls_dirs, h_ax)
+%PLOTSPHERICALGRID Plots a spherical quantity on a regular grid of directions.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if exist('ls_dirs','var') && ~isempty(ls_dirs), LS_PLOT = 1;
 else LS_PLOT = 0; end

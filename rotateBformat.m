@@ -1,6 +1,12 @@
 function bfsig_rot = rotateBformat(bfsig, yaw, pitch, roll)
-%ROTATEBFORMAT Summary of this function goes here
-%   Detailed explanation goes here
+%ROTATEBFORMAT Rotate a B-format sound scene, by yaw-pitch-roll angles.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % get rotation matrix
 Rzyx = euler2rotationMatrix(-yaw*pi/180, -pitch*pi/180, roll*pi/180, 'zyx');

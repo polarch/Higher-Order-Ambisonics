@@ -1,6 +1,12 @@
 function D_allrad = allrad(ls_dirs, order)
-%ALLRAD Summary of this function goes here
-%   Detailed explanation goes here
+%ALLRAD Implements the All-round ambisonic decoding of Zotter & Frank.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
         % t-value for the t-design
         t = 2*order + 1;

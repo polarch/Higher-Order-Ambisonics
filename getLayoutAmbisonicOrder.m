@@ -1,4 +1,12 @@
 function order = getLayoutAmbisonicOrder(ls_dirs)
+%GETLAYOUTAMBIORDER Returns the equivalent ambisonic order of the speaker layout, by Zotter & Frank.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ls_dirs_rad = ls_dirs*pi/180;
 ls_groups = sphDelaunay(ls_dirs_rad);

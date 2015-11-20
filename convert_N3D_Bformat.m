@@ -1,4 +1,12 @@
 function outsig = convert_N3D_Bformat(sig, type)
+%CONVERT_N3D_BFORMAT Converts from 1st order N3D/ACN signals to B-format
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 switch lower(type)
     case 'b2n'

@@ -1,6 +1,12 @@
 function Dmdip = csad(ls_dirs, N)
-%CSAD Summary of this function goes here
-%   Detailed explanation goes here
+%CSAD Implements the Constant angular spread HOA decoding of Epain, Jin & Zotter.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 ls_dirs_rad = ls_dirs*pi/180;
 [U_ls(:,1), U_ls(:,2), U_ls(:,3)] = sph2cart(ls_dirs_rad(:,1), ls_dirs_rad(:,2), 1);

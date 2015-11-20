@@ -1,6 +1,12 @@
 function hoasig_rot = rotateHOA_N3D(hoasig, yaw, pitch, roll)
-%ROTATEHOA_N3D Summary of this function goes here
-%   Detailed explanation goes here
+%ROTATEHOA_N3D Rotate a HOA encoded sound scene, by yaw-pitch-roll angles.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % get order
 Nchan = size(hoasig,2);

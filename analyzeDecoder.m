@@ -1,6 +1,12 @@
 function [E, A, rV_mag, rE_mag, rV_ang, rE_ang] = analyzeDecoder(Mtx, ls_dirs, type, angRes, PLOT_ON, INFO_ON)
-%ANALYZEDECODER Summary of this function goes here
-%   Detailed explanation goes here
+%ANALYZEDECODER Analyzes energy and velocity/energy vectors for a decoder.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if nargin<3, type = 'decoder'; angRes = [5 5]; PLOT_ON = 0; INFO_ON = 0;
 elseif nargin<4, angRes = [5 5]; PLOT_ON = 0; INFO_ON = 0;

@@ -1,6 +1,12 @@
 function outsig = convert_N3D_SN3D(insig, type)
-%CONVERT_N3D_TO_SN3D Summary of this function goes here
-%   Detailed explanation goes here
+%CONVERT_N3D_TO_SN3D Converts from N3D to SN3D HOA normalization convention.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 order = sqrt(size(insig,2))-1;
 

@@ -1,6 +1,12 @@
 function rE_mag = getTheoreticalEVmag(order)
-%GETTHEORETICALEVMAG Summary of this function goes here
-%   Detailed explanation goes here
+%GETTHEORETICALEVMAG Returns the theoretical energy vector magnitude of an ideal decoder.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 n = (0:order)';
 

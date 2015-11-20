@@ -1,7 +1,12 @@
 function outsig = convert_ACN_SID(insig, type)
-%CONVERT_ACN_SID Summary of this function goes here
-% Go from SID (ord,deg) : (0,0), (1,1),  (1,-1), (1,0), (2,2),  (2,-2), (2,1), (2,-1), (2,0)
-% to ACN (ord,deg)      : (0,0), (1,-1), (1,0),  (1,1), (2,-2), (2,-1), etc.
+%CONVERT_ACN_SID Converts from the ACN to SID convention for HOA channel indexing
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 order = sqrt(size(insig,2))-1;
 idx_ACN = zeros((order+1)^2, 2);

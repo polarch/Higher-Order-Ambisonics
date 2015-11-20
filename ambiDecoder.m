@@ -1,6 +1,12 @@
 function [D, order] = ambiDecoder(ls_dirs, method, rE_WEIGHT, order)
-%AMIDECODER Summary of this function goes here
-%   Detailed explanation goes here
+%AMBIDECODER Returns a HOA decoding matrix for a loudspeaker setup.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % find speaker triplets
 ls_dirs_rad = ls_dirs*pi/180;

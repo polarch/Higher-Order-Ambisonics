@@ -1,4 +1,12 @@
 function LSsig = decodeBformat(BFsig, M_dec, cutoffs, fs)
+%DECODEBFORMAT Returns speaker signals from B-format signals and a decoding matrix.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if nargin<3, nBands = 1;
 else nBands = length(cutoffs)+1; end

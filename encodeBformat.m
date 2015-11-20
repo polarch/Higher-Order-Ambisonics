@@ -6,6 +6,13 @@ function WXYZ = encodeBformat(signals, src_directions)
 %   should be either an Nx2 matrix, specifying the direction of each
 %   signal, or a vector [azi elev], in case all the signals are encoded
 %   with a single direction.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % number of signals
 N_src = size(signals, 2);

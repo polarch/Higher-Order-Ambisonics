@@ -1,4 +1,12 @@
 function LSsig = decodeHOA_N3D(hoasig, M_dec, cutoffs, fs)
+%DECODEHOA_N3D Returns speaker signals from HOA signals and a decoding matrix.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 if nargin<3, nBands = 1;
 else nBands = length(cutoffs)+1; end

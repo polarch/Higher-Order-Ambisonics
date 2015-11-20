@@ -1,6 +1,12 @@
 function a_n = getMaxREweights(order)
-%GETMAXREWEIGHTS Summary of this function goes here
-%   Detailed explanation goes here
+%GETMAXREWEIGHTS Returns the order weights for encoding or decoding that maximise energy vectors.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   Archontis Politis, 15/11/2015
+%   archontis.politis@aalto.fi
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
     a_n = [];
     for n=0:order
