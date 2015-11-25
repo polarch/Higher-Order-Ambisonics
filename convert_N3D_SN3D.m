@@ -1,5 +1,15 @@
 function outsig = convert_N3D_SN3D(insig, type)
-%CONVERT_N3D_TO_SN3D Converts from N3D to SN3D HOA normalization convention.
+%CONVERT_N3D_TO_SN3D Converts between N3D/SN3D HOA normalization conventions
+% CONVERT_N3D_TO_SN3D Converts from orthonormalized (N3D) HOA signals to 
+% Schmidt semi-normalized (SN3D) HOA signals, and the opposite. 
+%
+% Inputs:
+%   insig:  The N3D or SN3D HOA signals
+%   type:   'sn2n' to convert from SN3D to N3D, or 'n2sn' to do the
+%           opposite
+%
+% Outputs:
+%   outsig:  the converted signals
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -36,4 +46,3 @@ switch lower(type)
 end
 
 end
-

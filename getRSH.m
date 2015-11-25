@@ -1,10 +1,14 @@
 function R_N = getRSH(N, dirs_deg)
-%GETRSH Get real spherical harmonics up to order N
+%GETRSH Get vector of real orthonormal spherical harmonic values up to order N
 %
-%   N:  maximum order of harmonics
+% Inputs:
+%   N:      maximum order of harmonics
 %   dirs:   [azimuth_1 elevation_1; ...; azimuth_K elevation_K] angles
 %           in degs for each evaluation point, where elevation is the
 %           polar angle from the horizontal plane
+%
+% Outpus:
+%   R_N:    [(N+1)^2 x K] matrix of SH values
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

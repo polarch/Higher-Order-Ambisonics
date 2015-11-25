@@ -1,5 +1,22 @@
 function order = getLayoutAmbisonicOrder(ls_dirs)
-%GETLAYOUTAMBIORDER Returns the equivalent ambisonic order of the speaker layout, by Zotter & Frank.
+%GETLAYOUTAMBIORDER Returns the equivalent HOA order of the speaker layout
+% GETLAYOUTAMBIORDER computes an equivalent ambisonic decoding order of a 
+% speaker layout, based on mean spread across the layout. The relation is
+% given by Zotter & Frank in
+%
+%   Zotter, F., Frank, M. (2012). All-Round Ambisonic Panning and Decoding. 
+%   Journal of the Audio Engineering Society, 60(10), 807:820.
+%
+% The code requires the VBAP library found in:
+%
+% <https://github.com/polarch/Vector-Base-Amplitude-Panning>
+%
+% Inputs:   
+%   ls_dirs: speaker directions in [azi1 elev1; azi2 elev2;... ; aziL elevL]
+%            convention, in degrees
+%
+% Outputs:
+%   a_n:    [(order+1)^2] vector of weights
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

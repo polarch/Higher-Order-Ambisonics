@@ -1,5 +1,15 @@
 function outsig = convert_N3D_Bformat(sig, type)
-%CONVERT_N3D_BFORMAT Converts from 1st order N3D/ACN signals to B-format
+%CONVERT_N3D_BFORMAT Converts between 1st order N3D/ACN signals to B-format
+% CONVERT_N3D_BFORMAT Converts between 1st-order orthonormalized (N3D) 
+% signals, with ACN channel ordering, and traditional B-format.
+%
+% Inputs:
+%   insig:  The N3D/ACN or B-format signals
+%   type:   'b2n' to convert from B-format to N3D/ACN, or 'n2b' to do the
+%           opposite
+%
+% Outputs:
+%   outsig:  the converted signals
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

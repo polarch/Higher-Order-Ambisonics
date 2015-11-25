@@ -1,5 +1,24 @@
 function outsig = convert_ACN_SID(insig, type)
 %CONVERT_ACN_SID Converts from the ACN to SID convention for HOA channel indexing
+% CONVERT_ACN_SID Converts between HOA signals in the "canonical" indexing
+% of SH components, q=n^2+N+m+1, where q is the channel number, n is the
+% order and m is the degree, and the SID channel indexing, as defined by
+% Jerome Daniel in
+%
+%   Daniel, J. (2003). Spatial Sound Encoding Including Near Field Effect : 
+%   Introducing Distance Coding Filters and a Viable , New Ambisonic Format. 
+%   In 23rd International Conference of AES. Copenhagen, Denmark.
+%
+% The ACN indexing follows the order (0,0), (1,-1), (1,0), (1,1), ...
+% The SID indexing follows the order (0,0), (1,1), (1,-1), (1,0), ...
+%
+% Inputs:
+%   insig:  The ACN or SID HOA signals
+%   type:   'acn2sid' to convert from ACN to SID, or 'sid2acn' to do the
+%           opposite
+%
+% Outputs:
+%   outsig:  the converted signals
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

@@ -1,11 +1,17 @@
 function WXYZ = encodeBformat(signals, src_directions)
 %ENCODE_BFORMAT Encode a number of sound sources in ideal B-format.
-%   ENCODE_BFORMAT encodes a number of N signals, given as a matrix of
-%   N signal columns, to 'classic' B-format signals W, X, Y, Z. The
-%   src_directions are the azimuth and elevations of each signal and it
-%   should be either an Nx2 matrix, specifying the direction of each
-%   signal, or a vector [azi elev], in case all the signals are encoded
-%   with a single direction.
+% ENCODE_BFORMAT encodes a number of signals coming from certain directions,
+% to ideal B-format signals. The traditional sqrt(2) factor is assumed to
+% be on the dipoles.
+%
+% Inputs:   
+%   signals:    matrix of [L x K] signal values, where L is the length of
+%               the signals and K is the number of them.
+%   src_dirs:   source directions in [azi1 elev1; azi2 elev2;... ; aziK elevK]
+%               convention, in degrees
+%
+% Outputs:
+%   WXYZ:       [L x 4] B-format signals
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

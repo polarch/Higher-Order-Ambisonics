@@ -1,5 +1,24 @@
 function LSsig = decodeHOA_N3D(hoasig, M_dec, cutoffs, fs)
 %DECODEHOA_N3D Returns speaker signals from HOA signals and a decoding matrix.
+% DECODEHOA_N3D decodes HOA signals to a specific loudspeaker layout. The 
+% decoding matrix (or matrices), should be computed first (by ambiDecoder()
+% function). Frequency-dependent decoding can be achieved by specifying the
+% cutoff frequencies that switch between different decoding matrices, and
+% by passing as many matrices as ranges.
+%
+% Inputs:   
+%   hoasig: HOA signals (N3D normalization, ACN channel order)
+%   M_dec:  [K x (order+1)^2 x (Ncutoff+1)] decoding matrix, where K is the
+%           number of speakers, order is the HOA signals order, and Ncutoff
+%           is the number of cutoff frequencies (number of decoding ranges
+%           minus one). The third dimension contains the different decoder
+%           matrices for the higher frequency ranges, see
+%           TEST_AMBI_SCRIPT.m for an example.
+%   cutoffs: vector of cutoff frequencies, for frequency-dependent decoding
+%   fs:     sample rate
+%
+% Outputs:
+%   LSsig:  decoded loudspeaker signals
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

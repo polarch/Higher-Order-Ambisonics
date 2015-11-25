@@ -1,5 +1,25 @@
 function LSsig = decodeBformat(BFsig, M_dec, cutoffs, fs)
 %DECODEBFORMAT Returns speaker signals from B-format signals and a decoding matrix.
+% DECODEBFORMAT decodes B-format signals to a specific loudspeaker layout. 
+% The decoding matrix (or matrices), should be computed first (by the 
+% ambiDecoder() function). Frequency-dependent decoding can be achieved by 
+% specifying the cutoff frequencies that switch between different decoding 
+% matrices, and by passing as many matrices as ranges.
+%
+% Inputs:
+%   BFsig:  B-format signals
+%   M_dec:  [K x 4 x (Ncutoff+1)] decoding matrix, where K is the number of 
+%           speakers, order is the HOA signals order, and Ncutoff is the 
+%           number of cutoff frequencies (number of decoding ranges minus 
+%           one). The third dimension contains the different decoder matrices 
+%           for the higher frequency ranges, see TEST_AMBI_SCRIPT.m for an 
+%           example.
+%   cutoffs:    vector of cutoff frequencies, for frequency-dependent decoding
+%   fs:         sample rate
+%
+% Outputs:
+%   LSsig:  decoded loudspeaker signals
+%
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

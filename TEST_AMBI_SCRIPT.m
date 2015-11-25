@@ -914,13 +914,13 @@ foa_N3D_ACN_2 = convert_N3D_Bformat(bf, 'b2n');
 
 %% REFERENCES
 %
-% [1] Zotter, F., Pomberger, H., Noisternig, M. (2012). Energy-Preserving Ambisonic Decoding. Acta Acustica United with Acustica, 98(1), 37?47.
+% [1] Zotter, F., Pomberger, H., Noisternig, M. (2012). Energy-Preserving Ambisonic Decoding. Acta Acustica United with Acustica, 98(1), 37:47.
 %
-% [2] Zotter, F., Frank, M. (2012). All-Round Ambisonic Panning and Decoding. Journal of the Audio Engineering Society, 60(10), 807?820.
+% [2] Zotter, F., Frank, M. (2012). All-Round Ambisonic Panning and Decoding. Journal of the Audio Engineering Society, 60(10), 807:820.
 %
-% [3] Epain, N., Jin, C. T., Zotter, F. (2014). Ambisonic Decoding With Constant Angular Spread. Acta Acustica United with Acustica, 100, 928?936.
+% [3] Epain, N., Jin, C. T., Zotter, F. (2014). Ambisonic Decoding With Constant Angular Spread. Acta Acustica United with Acustica, 100, 928:936.
 %
-% [4] Daniel, J. (2001). Repr?sentation de champs acoustiques, application ? la transmission et ? la reproduction de sc?nes sonores complexes dans un contexte multim?dia. Doctoral Thesis. Universit? Paris 6.
+% [4] Daniel, J. (2001). Representation de champs acoustiques, application ? la transmission et ? la reproduction de sc?nes sonores complexes dans un contexte multim?dia. Doctoral Thesis. Universit? Paris 6.
 %
 % [5] Makita, Y. (1962). On the directional localization of sound in the stereophonic sound field. EBU Review, 73, 1536?1539.
 %

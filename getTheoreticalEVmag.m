@@ -1,5 +1,11 @@
 function rE_mag = getTheoreticalEVmag(order)
-%GETTHEORETICALEVMAG Returns the theoretical energy vector magnitude of an ideal decoder.
+%GETTHEORETICALEVMAG Theoretical energy vector magnitude of an ideal decoder.
+% GETTHEORETICALEVMAG returns the theoretical energy vector magnitude of a
+% continuous source distribution (ideal loudspeaker setup), when max-rE
+% weighting is considered. The relation is the one found in
+%
+%   Zotter, F., Frank, M. (2012). All-Round Ambisonic Panning and Decoding. 
+%   Journal of the Audio Engineering Society, 60(10), 807:820.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

@@ -1,5 +1,52 @@
 function [E, A, rV_mag, rE_mag, rV_ang, rE_ang] = analyzeDecoder(Mtx, ls_dirs, type, angRes, PLOT_ON, INFO_ON)
 %ANALYZEDECODER Analyzes energy and velocity/energy vectors for a decoder.
+% ANALYZEDECODER evaluates total energy and amplitude gain for a grid of 
+% directions, as well as energy and velocity vectors, and spread, for an 
+% ambisonic decoder or for a panning function in general. If the type
+% specified is 'decoder', an ambisonic decoding matrix should be passed to
+% the function, and then the loudspeaker gains for a grid of directions,
+% specified by angRes, are computed. If the type specified is 'panner', then 
+% a matrix of loudspeaker gains should be passed, that correspond to the
+% grid directions specified by angRes. In both cases, the results can be
+% plotted or returned as outputs. If an additional option INFO_ON is
+% enabled, then some extra information about the deviations of
+% amplitude, energy, energy/velocity vector magnitudes, directional
+% errors and perceptual spread, are printed in the console.
+%
+% Inputs:   
+%   Mtx:     The [L x (order+1)^2] ambisonic decoding matrix, for
+%            type='decoder', or the [(180/elevRes+1) x (360/aziRes+1) x L]
+%            matrix of loudspeaker gains for a grid of 
+%            angRes = [aziRes elevRes]. See the TEST_AMBI_SCRIPT.m for an
+%            example on panning analysis using VBAP/VBIP.
+%   ls_dirs: speaker directions in [azi1 elev1; azi2 elev2;... ; aziL elevL]
+%            convention, in degrees, for L loudspeakers in the layout
+%   type:    'decoder' for analysis of ambisonic decoding, or 'panner' for
+%            analysis of panning functions evaluated on a grid, see also
+%            the Mtx input variable. If not defined, the default is
+%            'decoder'
+%   angRes:  The resolution of the regular grid of direcitons to evaluate 
+%            the metrics, with angRes = [azi_resolution elev_resolution] in
+%            degrees. In case of type='panner', the resolution should match
+%            the dimensions of Mtx, see the description of the Mtx variable
+%            above. In the case of type = 'decoder', the resolution can be 
+%            anything. If not defined, default is angRes = [5 5].
+%   PLOT_ON: (0,1) Plot the various metrics. If not defined, default is 0.
+%   INFO_ON: Displays ranges of the various metrics and spread values,
+%            computed from the magnitude of the energy vector. In case of
+%            type='decoder', some additional information is displayed, such
+%            as equivalent ambisonic order, and theoretical spread. If not 
+%            defined, default is 0.
+%
+% Outputs:
+%   E:      Energy as the sum of squared gains for each grid point.
+%   A:      Amplitude as sum of gains for each grid point.
+%   rV_mag: Magnitude of the velocity vector, at each grid point.
+%   rE_mag: Magnitude of the energy vector, at each grid point.
+%   rV_ang: Directional error in degrees, between the direction of the grid 
+%           point and the direction of the velocity vector for that grid point.
+%   rE_ang: Directional error in degrees, between the direction of the grid 
+%           point and the direction of the energy vector for that grid point.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %

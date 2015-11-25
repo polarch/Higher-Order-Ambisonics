@@ -1,5 +1,17 @@
 function h_ax = plotSphericalGrid(F, ang_res, ls_dirs, h_ax)
-%PLOTSPHERICALGRID Plots a spherical quantity on a regular grid of directions.
+%PLOTSPHERICALGRID Plots spherical data on a regular grid of directions.
+% PLOTSPHERICALGRID plots data evaluated on a regular grid of azimuths and
+% elevations, with a specific angular resolution.
+%
+% Inputs:   
+%   F:       data on a matrix of size [(180/elev_res+1) x (360/azi_res+1)],
+%            where each row is the data values for azimuths from
+%            -180:azi_res:180deg, for a single elevation, and with elevations
+%            from -90:elev_res:90deg.
+%   ang_res: [azi_resolution elev_resolution] in degrees
+%   ls_dirs: speaker directions in [azi1 elev1; azi2 elev2;... ; aziL elevL]
+%            convention, to be plotted on top of the data (optional)
+%   h_ax:    axis handle to plot, useful for e.g. subplots (optional)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
