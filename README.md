@@ -2,10 +2,21 @@
 #### A compact library for encoding, manipulation and decoding of spatial sound using Higher Order Ambisonics.
 
 ---
+>
 >    Archontis Politis, 2015  
+>
 >    Department of Signal Processing and Acoustics, Aalto University, Finland  
+>
 >    archontis.politis@aalto.fi
+>
 ---
+
+This Matlab/Octave library was developed during my doctoral research in the [Communication Acoustics Research Group] (http://spa.aalto.fi/en/research/research_groups/communication_acoustics/), Aalto University, Finland. If you would like to reference the code, you can refer to my dissertation published [here](https://aaltodoc.aalto.fi/handle/123456789/22499):
+
+    Archontis Politis, Microphone array processing for parametric spatial audio techniques, 2016
+    Doctoral Dissertation, Department of Signal Processing and Acoustics, Aalto University, Finland
+    
+## Description
 
 This is a compact Matlab/Octave library implementing most common operations 
 associated with higher-order ambisonics (HOA), which refer to a set of
@@ -102,8 +113,8 @@ The library contains the following main functions:
                       signals with the SID indexing, and back
 * convert_N3D_SN3D:   Convert HOA signals with the N3D normalization to HOA 
                       signals with the SN3D normalization, and back
-* convert_N3D_SBformat: Convert 1st-order signals with the N3D and ACN 
-                        conventions to traditional B-format, and back
+* convert_N3D_Bformat: Convert 1st-order signals with the N3D and ACN 
+                       conventions to traditional B-format, and back
 
 
 For any questions, comments, corrections, or general feedback, please
