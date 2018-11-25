@@ -31,7 +31,7 @@ function D_csad = csad(ls_dirs, order)
 %   ls_dirs: speaker directions in [azi1 elev1; azi2 elev2;... ; aziL elevL]
 %            convention, in degrees
 %   order:   order of the HOA decoding matrix. For an irregular speaker
-%            layout, an well'beahved decoding order can be found by the
+%            layout, a well-behaved decoding order can be found by the
 %            getLayoutAmbisonicOrder() function.
 %
 % Outputs:

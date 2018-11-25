@@ -24,7 +24,6 @@ if exist('ls_dirs','var') && ~isempty(ls_dirs), LS_PLOT = 1;
 else LS_PLOT = 0; end
 
 if nargin<4
-    LS_PLOT = 1;
     figure
     h_ax = gca;
 end
