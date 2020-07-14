@@ -51,7 +51,7 @@ function rir_filt = synthesizeHOAreverb(order, fs, t60, fc, FLATTEN)
         rir_filt(:, n) = sum(fftfilt(h_filt, h_temp), 2);
     end
     
-    if FLATTEN, rir_filt_flat = equalizeMinphase(rir_filt); end
+    if FLATTEN, rir_filt = equalizeMinphase(rir_filt); end
 end
 
 
