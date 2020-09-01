@@ -35,7 +35,7 @@ function D_allrad = allrad(ls_dirs, order)
 
         % t-value for the t-design
         %t = 2*order + 1;
-        t = 20;
+        t = 21;
         % vbap gains for selected t-design
         [~, t_dirs_rad] = getTdesign(t);
         t_dirs = t_dirs_rad*180/pi;
