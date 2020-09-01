@@ -905,11 +905,11 @@ hoa_N3D_ACN_2 = convert_N3D_SN3D(hoa_SN3D_ACN, 'sn2n');
 hoa_N3D_SID = convert_ACN_SID(hoa_N3D_ACN, 'acn2sid');
 hoa_N3D_ACN_3 = convert_ACN_SID(hoa_N3D_SID, 'sid2acn');
 
-% ACN to Bformat (1st-order only) and back. Here the sqrt(2) factor of the
-% B-format is assumed to be on the dipoles.
+% ACN to Bformat (1st-order only) and back. Here the 1/sqrt(2) factor of the
+% B-format is assumed to be on the omni.
 foa_N3D_ACN = encodeHOA_N3D(1, 1, [0 0]);
-bf = convert_N3D_Bformat(foa_N3D_ACN, 'n2b');
-foa_N3D_ACN_2 = convert_N3D_Bformat(bf, 'b2n');
+bf = convert_N3D_FuMa(foa_N3D_ACN, 'n2fuma');
+foa_N3D_ACN_2 = convert_N3D_FuMa(bf, 'fuma2n');
 
 
 %% REFERENCES

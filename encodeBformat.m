@@ -33,7 +33,7 @@ gx = cos(src_az).*cos(src_el);
 gy = sin(src_az).*cos(src_el);
 gz = sin(src_el);
 
-Gwxyz = [gw sqrt(2)*[gx gy gz]];
+Gwxyz = [gw/sqrt(2) gx gy gz];
 
 % encode to B-format
 WXYZ = signals * Gwxyz;

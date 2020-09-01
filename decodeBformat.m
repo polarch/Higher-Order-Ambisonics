@@ -36,7 +36,7 @@ if size(M_dec,3) ~= nBands
 end
 
 
-N3Dsig = convert_N3D_Bformat(BFsig, 'b2n');
+N3Dsig = convert_N3D_FuMa(BFsig, 'fuma2n');
 if nBands == 1
     LSsig = N3Dsig * M_dec(:,1:4).';
 else
